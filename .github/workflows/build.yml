@@ -18,3 +18,9 @@ jobs:
 
       - name: Build
         run: make build-all
+
+      - name: Upload Windows Binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: picoclaw_Windows_x86_64
+          path: build/picoclaw-agents-windows-amd64.exe
